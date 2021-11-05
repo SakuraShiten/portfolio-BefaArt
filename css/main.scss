@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap");
+
+@mixin textVH($size) {
+  font-family: "Ubuntu", sans-serif;
+  font-size: calc(#{$size/2}px + #{100 / 1080 * $size/2}vh);
+}
+
+@function pxToVH($p) {
+  @return 100/1080 * $p;
+}
+@function pxToVW($p) {
+  @return 100/1920 * $p;
+}
+body {
+  background-color: #101010;
+  display: flex;
+  flex-direction: column;
+}
+.block-nav {
+  height: 100vw;
+  background-color: #b91616;
+  height: #{pxToVH(95)}vh;
+  display: flex;
+  align-items: center;
+  padding-left: #{pxToVW(301)}vw;
+  padding-right: #{pxToVW(301)}vw;
+  justify-content: center;
+  position: relative;
+
+  .select-lng {
+    cursor: pointer;
+
+    position: absolute;
+    right: #{pxToVW(265)}vw;
+    top: #{pxToVH(36)}vh;
+    width: 110px;
+    height: 25px;
+    transition: 0.4s;
+    overflow: hidden;
+    background-color: #b91616;
+    display: flex;
+    justify-content: space-evenly;
+    .group-select {
+      p {
+        @include textVH(18);
+        color: #fff;
+        font-weight: 300;
+        margin-bottom: 15px;
+        transition: 0.3s;
+      }
+    }
+    .select-lng-btn {
+      background-image: url("/images/select-lng-btn.svg");
+      margin-top: 5px;
+      width: 28px;
+      height: 9px;
+      background-repeat: no-repeat;
+      transition: 0.4s;
+    }
+  }
+  .select-lng:hover {
+    height: 100px;
+    p:hover {
+      color: rgb(218, 218, 218);
+    }
+    .select-lng-btn {
+      transform: scale(1, -1);
+    }
+  }
+  .nav-btn {
+    @include textVH(18);
+    color: #fff;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: #{pxToVW(764)}vw;
+    > p {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    > p:hover {
+      color: rgb(218, 218, 218);
+    }
+    > p:nth-child(3) {
+      @include textVH(24);
+      font-weight: 500;
+    }
+  }
+}
+.block-greetings {
+  width: #{pxToVW(1390)}vw;
+  height: #{pxToVH(615)}vh;
+  align-self: center;
+  margin-top: #{pxToVH(114)}vh;
+  position: relative;
+  .greetings-text {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    p:nth-child(1) {
+      margin-top: #{pxToVH(160)}vh;
+      @include textVH(36);
+      color: #fff;
+      font-weight: 500;
+    }
+    p:nth-child(2) {
+      @include textVH(220);
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+  .greetings-picture {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .picture-left {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      .picture-1 {
+        > div {
+          background-image: url("/images/greetings-1.jpg");
+          width: #{pxToVW(430)}vw;
+          height: #{pxToVH(280)}vh;
+          background-size: auto 100%;
+          background-repeat: no-repeat;
+          background-position: right;
+        }
+      }
+      .picture-2 {
+        > div {
+          background-image: url("/images/greetings-2.jpg");
+          width: #{pxToVW(430)}vw;
+          height: #{pxToVH(280)}vh;
+          background-size: auto 100%;
+          background-repeat: no-repeat;
+          background-position: right;
+        }
+      }
+    }
+    .picture-right {
+      .picture-3 {
+        > div {
+          background-image: url("/images/greetings-3.jpg");
+          width: #{pxToVW(910)}vw;
+          height: #{pxToVH(615)}vh;
+          background-size: auto 100%;
+          background-repeat: no-repeat;
+          background-position: left;
+        }
+      }
+    }
+  }
+  .greetings-text {
+  }
+}

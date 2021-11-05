@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap");
+body {
+  background-color: #101010;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.block-nav {
+  height: 100vw;
+  background-color: #b91616;
+  height: 8.7963vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15.67708vw;
+  padding-right: 15.67708vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.block-nav .select-lng {
+  cursor: pointer;
+  position: absolute;
+  right: 13.80208vw;
+  top: 3.33333vh;
+  width: 110px;
+  height: 25px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  overflow: hidden;
+  background-color: #b91616;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.block-nav .select-lng .group-select p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: calc(9px + 0.83333vh);
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.block-nav .select-lng .select-lng-btn {
+  background-image: url("/images/select-lng-btn.svg");
+  margin-top: 5px;
+  width: 28px;
+  height: 9px;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.block-nav .select-lng:hover {
+  height: 100px;
+}
+
+.block-nav .select-lng:hover p:hover {
+  color: #dadada;
+}
+
+.block-nav .select-lng:hover .select-lng-btn {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.block-nav .nav-btn {
+  font-family: "Ubuntu", sans-serif;
+  font-size: calc(9px + 0.83333vh);
+  color: #fff;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 39.79167vw;
+}
+
+.block-nav .nav-btn > p {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.block-nav .nav-btn > p:hover {
+  color: #dadada;
+}
+
+.block-nav .nav-btn > p:nth-child(3) {
+  font-family: "Ubuntu", sans-serif;
+  font-size: calc(12px + 1.11111vh);
+  font-weight: 500;
+}
+
+.block-greetings {
+  width: 72.39583vw;
+  height: 56.94444vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 10.55556vh;
+  position: relative;
+}
+
+.block-greetings .greetings-text {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.block-greetings .greetings-text p:nth-child(1) {
+  margin-top: 14.81481vh;
+  font-family: "Ubuntu", sans-serif;
+  font-size: calc(18px + 1.66667vh);
+  color: #fff;
+  font-weight: 500;
+}
+
+.block-greetings .greetings-text p:nth-child(2) {
+  font-family: "Ubuntu", sans-serif;
+  font-size: calc(110px + 10.18519vh);
+  color: #fff;
+  font-weight: 500;
+}
+
+.block-greetings .greetings-picture {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block-greetings .greetings-picture .picture-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.block-greetings .greetings-picture .picture-left .picture-1 > div {
+  background-image: url("/images/greetings-1.jpg");
+  width: 22.39583vw;
+  height: 25.92593vh;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.block-greetings .greetings-picture .picture-left .picture-2 > div {
+  background-image: url("/images/greetings-2.jpg");
+  width: 22.39583vw;
+  height: 25.92593vh;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.block-greetings .greetings-picture .picture-right .picture-3 > div {
+  background-image: url("/images/greetings-3.jpg");
+  width: 47.39583vw;
+  height: 56.94444vh;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+/*# sourceMappingURL=main.css.map */
