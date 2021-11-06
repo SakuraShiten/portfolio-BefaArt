@@ -123,39 +123,55 @@ body {
       justify-content: space-between;
       flex-direction: column;
       .picture-1 {
-        > div {
-          background-image: url("/images/greetings-1.jpg");
-          width: #{pxToVW(430)}vw;
-          height: #{pxToVH(280)}vh;
-          background-size: auto 100%;
-          background-repeat: no-repeat;
-          background-position: right;
-        }
+        background-image: url("/images/greetings-1.jpg");
+        width: #{pxToVW(430)}vw;
+        height: #{pxToVH(280)}vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
       }
       .picture-2 {
-        > div {
-          background-image: url("/images/greetings-2.jpg");
-          width: #{pxToVW(430)}vw;
-          height: #{pxToVH(280)}vh;
-          background-size: auto 100%;
-          background-repeat: no-repeat;
-          background-position: right;
-        }
+        background-image: url("/images/greetings-2.jpg");
+        width: #{pxToVW(430)}vw;
+        height: #{pxToVH(280)}vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
     .picture-right {
       .picture-3 {
-        > div {
-          background-image: url("/images/greetings-3.jpg");
-          width: #{pxToVW(910)}vw;
-          height: #{pxToVH(615)}vh;
-          background-size: auto 100%;
-          background-repeat: no-repeat;
-          background-position: left;
-        }
+        background-image: url("/images/greetings-3.jpg");
+        width: #{pxToVW(910)}vw;
+        height: #{pxToVH(615)}vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
   }
-  .greetings-text {
+}
+.block-portfolio {
+  margin-top: #{pxToVH(152)}vh;
+  display: flex;
+  width: #{pxToVW(1390)}vw;
+  align-self: center;
+
+  .portfolio-gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .gallery-left,
+    .gallery-right {
+      .portfolio-image {
+        margin-bottom: #{pxToVH(54)}vh;
+        background-image: url("/images/portfolio-test.jpg");
+        width: #{pxToVW(670)}vw;
+        height: #{pxToVH(395)}vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
   }
 }
