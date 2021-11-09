@@ -206,6 +206,10 @@ body {
   background-position: center;
 }
 
+.block-portfolio.active-more {
+  height: 212.96296vh;
+}
+
 .block-portfolio {
   margin-top: 14.07407vh;
   display: -webkit-box;
@@ -214,6 +218,9 @@ body {
   width: 72.39583vw;
   -ms-flex-item-align: center;
       align-self: center;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  height: 87.96296vh;
 }
 
 .block-portfolio .portfolio-gallery {
@@ -398,5 +405,36 @@ body {
 
 .block-portfolio .portfolio-gallery .gallery-right .portfolio-image:nth-child(6) {
   background-image: url("/images/portfolio/p10.jpg");
+}
+
+.btn-show-hide-gal {
+  width: 11.71875vw;
+  height: 6.01852vh;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: calc(9px + 0.83333vh);
+  color: #fff;
+  font-weight: 500;
+  border: 2px #fff solid;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-show-hide-gal:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #fff;
+  color: #101010;
 }
 /*# sourceMappingURL=main.css.map */

@@ -152,11 +152,17 @@ body {
     }
   }
 }
+
+.block-portfolio.active-more {
+  height: #{pxToVH(2300)}vh;
+}
 .block-portfolio {
   margin-top: #{pxToVH(152)}vh;
   display: flex;
   width: #{pxToVW(1390)}vw;
   align-self: center;
+  transition: 0.6s;
+  height: #{pxToVH(950)}vh;
 
   .portfolio-gallery {
     display: flex;
@@ -295,4 +301,23 @@ body {
       }
     }
   }
+}
+.btn-show-hide-gal {
+  width: #{pxToVW(225)}vw;
+  height: #{pxToVH(65)}vh;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include textVH(18);
+  color: #fff;
+  font-weight: 500;
+  border: 2px #fff solid;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn-show-hide-gal:hover {
+  transition: 0.3s;
+  background-color: #fff;
+  color: #101010;
 }

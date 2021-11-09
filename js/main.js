@@ -2,9 +2,40 @@ document.addEventListener("DOMContentLoaded", function (event) {
     main();
 })
 function main() {
-    initBtnPortfolio();
+    initBtnShowHide();
+    initPlaceHolderPortfolio();
 };
-function initBtnPortfolio() {
+function initBtnShowHide() {
+    let btn = document.querySelector("#btnShowHide");
+    let arrayImage = document.querySelectorAll('.portfolio-image');
+
+    let active = false;
+    let timeout = true;
+    let btnAction = function () {
+        if (!timeout) return;
+        timeout = false;
+        setTimeout(() => {
+            timeout = true;
+        }, 500);
+        if (active) {
+            Array.from(arrayImage).map((elem) => { if (!elem.hasAttribute("data-hide")) elem.style.display = "none" });
+            active = false;
+            let box = document.querySelector(".block-portfolio");
+            box.classList.remove("active-more");
+            
+        } else {
+            Array.from(arrayImage).map(elem => elem.style.display = "block");
+            active = true;
+            let box = document.querySelector(".block-portfolio");
+            box.classList.add("active-more");
+            let test = document.querySelector(".greetings-text")
+      
+            test.scrollTo({top: 175, behavior: 'smooth'});
+        }
+    }
+    btn.addEventListener("click", btnAction);
+}
+function initPlaceHolderPortfolio() {
     let arrayBtnInfoIcon = document.querySelectorAll(".icon-info");
     let timeout = true;
     for (let obj of Array.from(arrayBtnInfoIcon)) {
